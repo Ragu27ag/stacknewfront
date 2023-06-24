@@ -137,17 +137,18 @@ const Quesdetails = () => {
                                             Browse other Question tagged
                                             {ques.quesTags.map((tag) => (
                                                 <Link to="/Tags" key={tag} className="ans-tags">
-                                                    {/* {" "}
-                        {tag}{" "} */}
+                                                    {" "}
+                        {tag}{" "}
                                                 </Link>
-                                            ))}{" "}
-                                            or
+                                            ))}{""}
+                                            or 
+                                            {"  "}
                                             <Link
-                                                to="/AskQuestion"
+                                                to="/AskQues"
                                                 style={{ textDecoration: "none", color: "#009dff" }}
                                             >
                                                 {/* {" "} */}
-                                                ask your own question.
+                                                 ask your own question.
                                             </Link>
                                         </p>
                                     </section>
