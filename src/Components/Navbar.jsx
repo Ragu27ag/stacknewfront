@@ -78,13 +78,6 @@ const Navbar = () => {
     </Box>
   )
 }
-{/* <Link style={{
-  border: 'solid 1px blue',
-  borderRadius: '3px',
-  backgroundColor: 'primary',
-  cursor: 'pointer',
-  textDecoration: 'none',
- 
-}} to='/Auth'>log in</Link> */}
+
 
 export default Navbar
