@@ -20,9 +20,9 @@ const DisplayAnswer = ({ ques }) => {
           
           <>
             <div className='display-ans' key={ans._id}>
-              <p>{ans.answerBody}</p>
-              <p>user : {ans.userAnswered}</p>
-              <p>{moment(ans.answeredon).fromNow()}</p>
+              <h5>{ans.answerBody}</h5>
+              <p style = {{textAlign:'end'}}>user : {ans.userAnswered}</p>
+              <p style = {{textAlign:'end'}}>{moment(ans.answeredon).fromNow()}</p>
               {
                 User?.result?._id === ans?.userId &&
                 (<Button variant="text" onClick={() => handleDelete(ans._id,ques.noofanswer)}>Delete</Button>)

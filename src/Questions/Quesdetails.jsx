@@ -51,7 +51,7 @@ const Quesdetails = () => {
     }
     const handleShare = () => {
             copy(url+loc.pathname)
-            alert(url+loc.pathname);
+            alert('Copied to clipboard : '+url+loc.pathname);
     }
 
     const handleDelete = () =>{
@@ -82,8 +82,8 @@ const Quesdetails = () => {
                                                 <button onClick = {handleDownvote} style={{background:'none',border:'none'}}><KeyboardArrowDownIcon/></button>
                                             </div>
                                             <div style={{ width: '100%' }}>
-                                            <p className='question-body'>Answer:</p>
-                                                <p className='question-body'>{ques.quesBody}</p>
+                                           
+                                                <h6 className='question-body'>{ques.quesBody}</h6>
                                             </div>
                                             <div className='qusetoin-action-user'>
                                                 <div>
@@ -107,7 +107,7 @@ const Quesdetails = () => {
                                         ques.noofanswers !== 0 && (
                                             <section>
                                                 <h3>{ques.answers.length} answers</h3>
-                                                <DisplayAnswer key={ques._id} ques={ques} />
+                                                <DisplayAnswer key={ques._id} ques={ques}  />
                                             </section>
                                         )
                                     }
