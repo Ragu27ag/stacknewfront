@@ -19,7 +19,7 @@ const Navbar = () => {
     dispatch(setcurrentuser(null))
   }
 
-  
+
   const dispatch = useDispatch();
   const navigate = useNavigate()
   var user = useSelector((state) => state.currentUserReducer);
@@ -32,7 +32,7 @@ const Navbar = () => {
     if(token){
       const decodedtoken = jwtDecode(token);
       if(decodedtoken.exp * 1000 < new Date().getTime()){
-          handleLogout()
+          // handleLogout()
       }
     }
     dispatch(setcurrentuser(JSON.parse(localStorage.getItem('Profile'))))
