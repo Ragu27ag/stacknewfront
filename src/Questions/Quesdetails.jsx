@@ -23,7 +23,7 @@ const Quesdetails = () => {
     console.log(questionlist);
     const [answerr,setAnswer] = useState('')
     const loc = useLocation();
-    const url = 'http://localhost:3000'
+    const url = 'https://stacknewback.onrender.com'
     const handlePostAns =(e,answerLength) => {
         e.preventDefault();
         if (User === null) {
