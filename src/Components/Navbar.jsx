@@ -12,9 +12,20 @@ import jwtDecode from "jwt-decode";
 
 
 const Navbar = () => {
+
+  const handleLogout = () => {
+    dispatch({ type: 'LOGOUT' })
+    navigate('/')
+    dispatch(setcurrentuser(null))
+  }
+
+  
   const dispatch = useDispatch();
   const navigate = useNavigate()
   var user = useSelector((state) => state.currentUserReducer);
+
+
+  
 
   useEffect(() => {
     const token = user?.token;
@@ -25,14 +36,11 @@ const Navbar = () => {
       }
     }
     dispatch(setcurrentuser(JSON.parse(localStorage.getItem('Profile'))))
-  }, [dispatch])
-  console.log(user)
+  }, [user?.token,dispatch])
 
-  const handleLogout = () => {
-    dispatch({ type: 'LOGOUT' })
-    navigate('/')
-    dispatch(setcurrentuser(null))
-  }
+  // console.log('adfasdfasd'+'user')
+
+  
 
 
   const handleLogin = () => {
